@@ -1,29 +1,54 @@
-# Ebook Manuscript: The Storm and the Mechanic
+# THE RESCUE BOAT AND OTHER COUNTER-NARRATIVES
 
-This repository contains the manuscript for the ebook project.
+**Twelve articles on trauma, addiction, and the nervous system**
 
-## Structure
+**Author:** Daniel Lingar  
+**Basis:** Based on *From the Storm to the Fire* and the *WRH Master Curriculum*
 
-The manuscript is organized into articles. Each article addresses a specific aspect of trauma, recovery, and the nervous system.
+---
 
-- `manuscript/`: Contains the formatted articles in Markdown.
-- `missing_pieces/`: Placeholders for the Seven Missing Pieces mentioned in the articles.
+## Formatting Specifications
 
-## Content Status
+For final production (PDF/KDP), apply the following:
+- **Page Size:** 6" x 9" (Trade Paperback) or 8.5" x 11" (Handout)
+- **Font:** 11pt Georgia or Garamond (Body); 14pt Bold Sans-Serif (Titles)
+- **Line Spacing:** 1.15
+- **Margins:** 0.7" all sides
+- **Cover:** Distressed font (Bebas Neue) over cover image.
 
-- [ ] Article 1 (Pending)
-- [x] Article 2: They Called It Noncompliance
-- [x] Article 3: Shame Is The Glue
-- [x] Article 4: Staying Stoic Is A Cage
-- [x] Article 5: The Shakes Are The Alarm Waking Up
-- [x] Article 6: I Got Clean. I Didn't Get Free
-- [x] Article 7: You Can't Punish Freeze
-- [x] Article 8: Normal Is The Most Addictive State
-- [x] Article 9: The Mirror Lies
-- [x] Article 10: I Needed A Co-Regulator, Not A Savior
-- [x] Article 11: You Can't Outrun Your Nervous System
-- [x] Article 12: Healing Is A Spiral
+---
 
-## Adding Content
+## Manuscript Status
 
-To add new articles or the remaining pieces, create a new Markdown file in the appropriate directory or update the existing ones.
+The manuscript is organized into three parts:
+
+### PART I: THE COUNTER-NARRATIVES
+- [x] [Article 1: The Rescue Boat](manuscript/article_01.md)
+- [x] [Article 2: They Called It Noncompliance](manuscript/article_02.md)
+- [x] [Article 3: Shame Is the Glue](manuscript/article_03.md)
+- [x] [Article 4: Staying Stoic Is a Cage](manuscript/article_04.md)
+- [x] [Article 5: The Shakes Are the Alarm Waking Up](manuscript/article_05.md)
+- [x] [Article 6: I Got Clean. I Didn't Get Free.](manuscript/article_06.md)
+- [x] [Article 7: You Can't Punish Freeze](manuscript/article_07.md)
+- [x] [Article 8: Normal Is the Most Addictive State](manuscript/article_08.md)
+- [x] [Article 9: The Mirror Lies](manuscript/article_09.md)
+- [x] [Article 10: I Needed a Co-Regulator, Not a Savior](manuscript/article_10.md)
+- [x] [Article 11: You Can't Outrun Your Nervous System](manuscript/article_11.md)
+- [x] [Article 12: Healing Is a Spiral](manuscript/article_12.md)
+
+### PART II: TECHNICAL APPENDIX
+- [x] [Deep Science and Reframes](manuscript/appendix.md)
+
+### PART III: THE SEVEN MISSING PIECES
+- [x] [What the System Leaves Out](manuscript/missing_pieces_overview.md)
+
+### BACK MATTER
+- [x] [About the Author](manuscript/about_author.md)
+
+---
+
+## Copyright & Disclaimer
+© 2026 Daniel Lingar. All rights reserved.  
+Published by Capitol Contracts LLC, Clarksville, Arkansas.
+
+**Disclaimer:** This book is not a substitute for professional medical or mental health advice. If you are in crisis, please reach out to a trusted person or a crisis hotline.
