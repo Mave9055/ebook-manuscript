@@ -113,9 +113,7 @@ export default function Home() {
                         >
                           <div className="flex items-start gap-4">
                             <div className="flex-shrink-0 w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center font-sans font-bold text-accent text-sm">
-                              {articles[0].id === ARTICLES[0].id
-                                ? article.id
-                                : index + 1}
+                              {article.id}
                             </div>
                             <div className="flex-1 min-w-0">
                               <h4 className="font-bold text-foreground group-hover:text-accent transition-colors">
