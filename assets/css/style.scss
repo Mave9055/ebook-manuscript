@@ -1,0 +1,212 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+// Custom styling for The Rescue Boat
+
+// Color scheme
+$primary-color: #1a1a1a;
+$accent-color: #d4a574;
+$light-bg: #f9f7f4;
+$text-color: #2c2c2c;
+$border-color: #e0e0e0;
+
+// Typography
+$font-family-serif: 'Georgia', 'Garamond', serif;
+$font-family-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+
+// Layout
+body {
+  background-color: #ffffff;
+  color: $text-color;
+  font-family: $font-family-serif;
+  line-height: 1.6;
+}
+
+// Header/Navigation
+header {
+  background: linear-gradient(135deg, $primary-color 0%, #2d2d2d 100%);
+  border-bottom: 3px solid $accent-color;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  color: $accent-color;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+  font-family: $font-family-sans;
+  letter-spacing: 0.5px;
+}
+
+header p {
+  color: #d0d0d0;
+  margin: 0.5rem 0 0 0;
+  font-size: 0.95rem;
+  font-family: $font-family-sans;
+}
+
+// Main content
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+// Article links
+a {
+  color: $accent-color;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-bottom-color: $accent-color;
+    color: #e8c4a0;
+  }
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  color: $primary-color;
+  font-family: $font-family-sans;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+h1 {
+  font-size: 2.2rem;
+  border-bottom: 2px solid $accent-color;
+  padding-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  color: $primary-color;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+// Blockquotes
+blockquote {
+  border-left: 4px solid $accent-color;
+  padding-left: 1rem;
+  margin-left: 0;
+  color: #555;
+  font-style: italic;
+  background-color: $light-bg;
+  padding: 0.75rem 1rem;
+}
+
+// Code blocks
+code {
+  background-color: $light-bg;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-family: 'Monaco', 'Courier New', monospace;
+  font-size: 0.9rem;
+}
+
+pre {
+  background-color: $light-bg;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  padding: 1rem;
+  overflow-x: auto;
+
+  code {
+    background-color: transparent;
+    padding: 0;
+  }
+}
+
+// Lists
+ul, ol {
+  margin: 1rem 0;
+  padding-left: 2rem;
+
+  li {
+    margin: 0.5rem 0;
+  }
+}
+
+// Article list styling
+.article-list {
+  display: grid;
+  gap: 1.5rem;
+  margin: 2rem 0;
+
+  li {
+    list-style: none;
+    padding: 1rem;
+    border-left: 3px solid $accent-color;
+    background-color: $light-bg;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #f0ebe5;
+      transform: translateX(5px);
+    }
+
+    a {
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+// Footer
+footer {
+  background-color: $primary-color;
+  color: #d0d0d0;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+  border-top: 3px solid $accent-color;
+  font-size: 0.9rem;
+  font-family: $font-family-sans;
+
+  a {
+    color: $accent-color;
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  main {
+    padding: 0 1rem;
+  }
+}
+
+// Print-friendly styles
+@media print {
+  header {
+    background: none;
+    border-bottom: 2px solid $primary-color;
+  }
+
+  a {
+    color: $primary-color;
+  }
+
+  blockquote {
+    border-left: 3px solid $primary-color;
+  }
+}
