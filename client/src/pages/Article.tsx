@@ -87,7 +87,7 @@ export default function Article({ slug }: { slug: string }) {
           <div className="mb-12 pb-8 border-b border-border">
             <div className="flex items-center justify-between mb-4">
               <span className="text-sm font-sans text-muted uppercase tracking-wide">
-                Article {currentIndex + 1} of {totalArticles}
+                Article {currentIndex} of {totalArticles}
               </span>
               <span className="text-sm font-sans text-muted">
                 {article.readingTime} min read
@@ -183,9 +183,7 @@ export default function Article({ slug }: { slug: string }) {
               )}
 
               <div className="text-center font-sans text-sm text-muted">
-                <p>
-                  Article {currentIndex + 1} of {totalArticles}
-                </p>
+                <p>Article {currentIndex} of {totalArticles}</p>
               </div>
 
               {nextArticle ? (
