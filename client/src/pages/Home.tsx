@@ -17,26 +17,48 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header section */}
-      <header className="bg-gradient-to-r from-primary to-secondary border-b-4 border-accent py-16 md:py-20">
-        <div className="container">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl font-bold text-accent mb-4 font-sans leading-tight">
-              The Rescue Boat
-            </h1>
-            <h2 className="text-2xl md:text-3xl text-accent/80 mb-6 font-serif italic">
-              & Other Counter-Narratives
-            </h2>
-            <p className="text-lg text-primary-foreground/90 font-serif leading-relaxed mb-6">
-              Twelve articles on trauma, addiction, and the nervous system
-            </p>
-            <p className="text-base text-primary-foreground/80 font-serif">
-              These articles challenge the narratives that have been used to shame, blame, and
-              misunderstand survivors of trauma and addiction. They are written from lived
-              experience and grounded in neuroscience.
-            </p>
+      {/* Header section with Cover Image */}
+      <header className="relative bg-primary overflow-hidden">
+        {/* Background Image Overlay */}
+        <div className="absolute inset-0 z-0 opacity-40">
+          <img 
+            src="/ebook-manuscript/assets/cover.png" 
+            alt="" 
+            className="w-full h-full object-cover object-center filter blur-sm"
+          />
+        </div>
+        
+        <div className="container relative z-10 py-16 md:py-24">
+          <div className="flex flex-col md:flex-row gap-12 items-center">
+            {/* Main Cover Image */}
+            <div className="w-full max-w-[320px] shadow-2xl border-4 border-accent/30 rounded-lg overflow-hidden transform md:-rotate-2 transition-transform hover:rotate-0 duration-500">
+              <img 
+                src="/ebook-manuscript/assets/cover.png" 
+                alt="The Rescue Boat Book Cover" 
+                className="w-full h-auto"
+              />
+            </div>
+
+            <div className="max-w-2xl text-center md:text-left">
+              <h1 className="text-5xl md:text-7xl font-bold text-accent mb-4 font-sans leading-tight border-none pb-0">
+                The Rescue Boat
+              </h1>
+              <h2 className="text-2xl md:text-3xl text-accent/90 mb-6 font-serif italic">
+                & Other Counter-Narratives
+              </h2>
+              <div className="w-24 h-1 bg-accent mb-8 mx-auto md:mx-0"></div>
+              <p className="text-xl text-primary-foreground/90 font-serif leading-relaxed mb-6">
+                Twelve articles on trauma, addiction, and the nervous system
+              </p>
+              <p className="text-base text-primary-foreground/80 font-serif max-w-xl">
+                These articles challenge the narratives that have been used to shame, blame, and
+                misunderstand survivors of trauma and addiction. They are written from lived
+                experience and grounded in neuroscience.
+              </p>
+            </div>
           </div>
         </div>
+        <div className="h-2 bg-accent w-full"></div>
       </header>
 
       {/* Welcome section */}
@@ -90,7 +112,7 @@ export default function Home() {
                     className="w-full px-6 py-4 bg-card hover:bg-accent/10 transition-colors flex items-center justify-between text-left"
                   >
                     <div>
-                      <h3 className="text-lg font-bold font-sans text-accent">
+                      <h3 className="text-lg font-bold font-sans text-accent mt-0 mb-0">
                         {partInfo.title}
                       </h3>
                       <p className="text-sm text-muted mt-1">{partInfo.description}</p>
@@ -116,7 +138,7 @@ export default function Home() {
                               {article.id}
                             </div>
                             <div className="flex-1 min-w-0">
-                              <h4 className="font-bold text-foreground group-hover:text-accent transition-colors">
+                              <h4 className="font-bold text-foreground group-hover:text-accent transition-colors mt-0 mb-0">
                                 {article.title}
                               </h4>
                               <p className="text-sm text-muted mt-1">
@@ -191,7 +213,7 @@ export default function Home() {
       </section>
 
       {/* Copyright section */}
-      <section className="py-12 md:py-16 bg-primary text-primary-foreground border-t-4 border-accent">
+      <footer className="py-12 md:py-16 bg-primary text-primary-foreground border-t-4 border-accent">
         <div className="container max-w-3xl">
           <div className="space-y-4 font-sans text-sm">
             <p>
@@ -205,7 +227,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-      </section>
+      </footer>
     </div>
   );
 }

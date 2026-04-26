@@ -73,12 +73,7 @@ export default function Article({ slug }: { slug: string }) {
               Home
             </button>
             <span>/</span>
-            <button
-              onClick={() => setLocation("/")}
-              className="hover:text-accent transition-colors"
-            >
-              Articles
-            </button>
+            <span className="text-muted">Articles</span>
             <span>/</span>
             <span className="text-foreground">{article.title}</span>
           </div>

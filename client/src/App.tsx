@@ -6,6 +6,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import ArticleWrapper from "./pages/ArticleWrapper";
+import StoicBarrier from "./components/StoicBarrier";
 
 function Router() {
   return (
@@ -27,6 +28,7 @@ function App() {
       <ThemeProvider defaultTheme="light">
         <TooltipProvider>
           <Toaster />
+          <StoicBarrier />
           <Router />
         </TooltipProvider>
       </ThemeProvider>
