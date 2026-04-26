@@ -297,7 +297,7 @@ export default function Home() {
             <p className="text-sm text-muted pt-4 border-t border-border mt-6">
               For more information and resources, visit the{" "}
               <a
-                href="https://wrh-master-curriculum.github.io"
+                href="https://mave9055.github.io/wrh-master-curriculum/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-accent hover:text-accent/80 underline"
