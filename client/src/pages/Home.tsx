@@ -13,7 +13,7 @@ export default function Home() {
     "counter-narratives"
   );
 
-  const parts = ["counter-narratives", "appendix", "missing-pieces"] as const;
+  const parts = ["counter-narratives", "appendix", "missing-pieces", "resources"] as const;
 
   return (
     <div className="min-h-screen bg-background">
@@ -99,7 +99,7 @@ export default function Home() {
           <div className="space-y-6">
             {parts.map((part) => {
               const articles = getArticlesByPart(part);
-              const partInfo = ARTICLE_PARTS[part];
+              const partInfo = ARTICLE_PARTS[part as keyof typeof ARTICLE_PARTS];
               const isExpanded = expandedPart === part;
 
               return (
@@ -203,6 +203,9 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-accent hover:text-accent/80 underline"
+                onClick={(e) => {
+                  e.stopPropagation();
+                }}
               >
                 WRH Master Curriculum
               </a>

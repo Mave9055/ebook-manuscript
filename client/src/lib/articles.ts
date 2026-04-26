@@ -3,7 +3,7 @@ export interface Article {
   slug: string;
   title: string;
   subtitle: string;
-  part: "counter-narratives" | "appendix" | "missing-pieces";
+  part: "counter-narratives" | "appendix" | "missing-pieces" | "resources";
   contentFile: string;
   readingTime: number;
   themes: string[];
@@ -165,6 +165,50 @@ export const ARTICLES: Article[] = [
     themes: ["Systems", "Tools", "Reframes", "Recovery"],
     relatedArticles: [],
   },
+  {
+    id: 15,
+    slug: "freeze-response-protocol",
+    title: "Freeze Response Protocol for Courtrooms",
+    subtitle: "Operational reframes for legal support staff",
+    part: "resources",
+    contentFile: "freeze_protocol.md",
+    readingTime: 5,
+    themes: ["Legal System", "Freeze Response", "Protocol"],
+    relatedArticles: [2, 7],
+  },
+  {
+    id: 16,
+    slug: "the-26-laws-of-survival",
+    title: "The 26 Laws of Survival",
+    subtitle: "Heuristic tools for pattern recognition",
+    part: "resources",
+    contentFile: "26_laws.md",
+    readingTime: 10,
+    themes: ["Survival", "Laws", "Pattern Recognition"],
+    relatedArticles: [],
+  },
+  {
+    id: 17,
+    slug: "harm-reduction-note",
+    title: "Harm Reduction Note",
+    subtitle: "Regulation, not perfection",
+    part: "resources",
+    contentFile: "harm_reduction.md",
+    readingTime: 3,
+    themes: ["Harm Reduction", "Regulation", "Addiction"],
+    relatedArticles: [1, 8],
+  },
+  {
+    id: 18,
+    slug: "co-regulation-barriers",
+    title: "Co-Regulation Barriers & Low-Bar Alternatives",
+    subtitle: "Building scaffolds for connection",
+    part: "resources",
+    contentFile: "co_regulation_barriers.md",
+    readingTime: 4,
+    themes: ["Co-Regulation", "Barriers", "Connection"],
+    relatedArticles: [10, 4],
+  },
 ];
 
 export const ARTICLE_PARTS = {
@@ -180,6 +224,10 @@ export const ARTICLE_PARTS = {
     title: "PART III: THE SEVEN MISSING PIECES",
     description: "The tools and reframes that traditional systems overlook",
   },
+  resources: {
+    title: "ADDITIONAL RESOURCES",
+    description: "Protocols, laws, and practical tools for survival and support",
+  },
 };
 
 export function getArticleById(id: number): Article | undefined {
@@ -191,7 +239,7 @@ export function getArticleBySlug(slug: string): Article | undefined {
 }
 
 export function getArticlesByPart(
-  part: "counter-narratives" | "appendix" | "missing-pieces"
+  part: "counter-narratives" | "appendix" | "missing-pieces" | "resources"
 ): Article[] {
   return ARTICLES.filter((article) => article.part === part);
 }
