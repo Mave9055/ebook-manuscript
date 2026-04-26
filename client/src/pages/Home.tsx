@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useLocation } from "wouter";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown, ChevronUp, ArrowRight } from "lucide-react";
 import {
   ARTICLES,
   ARTICLE_PARTS,
@@ -51,9 +51,7 @@ export default function Home() {
                 Twelve articles on trauma, addiction, and the nervous system
               </p>
               <p className="text-base text-primary-foreground/80 font-serif max-w-xl">
-                These articles challenge the narratives that have been used to shame, blame, and
-                misunderstand survivors of trauma and addiction. They are written from lived
-                experience and grounded in neuroscience.
+                This book is a trauma-informed survival doctrine. It does not offer comfort. It offers translation.
               </p>
             </div>
           </div>
@@ -61,42 +59,138 @@ export default function Home() {
         <div className="h-2 bg-accent w-full"></div>
       </header>
 
-      {/* Welcome / How to Read Section */}
+      {/* WHAT THIS IS Section */}
       <section className="py-12 md:py-16 bg-card border-b border-border">
         <div className="container max-w-3xl">
-          <h2 className="text-3xl font-bold mb-8 font-sans">How to Read This Book</h2>
+          <h2 className="text-3xl font-bold mb-8 font-sans text-accent">What This Is</h2>
+          <div className="space-y-6 text-foreground font-serif leading-relaxed">
+            <p className="text-xl font-medium italic">
+              "This book is a trauma-informed survival doctrine. It does not offer comfort. It offers translation."
+            </p>
+            
+            <div className="grid gap-8 md:grid-cols-2">
+              <div>
+                <h3 className="text-lg font-bold mb-2 font-sans uppercase tracking-wider text-accent">The Problem</h3>
+                <p className="text-sm text-muted-foreground">
+                  Traditional systems measure compliance. Traumatized nervous systems measure survival. When the two collide, freeze is labeled defiance, shame is called conscience, and addiction is treated as a moral failure.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-lg font-bold mb-2 font-sans uppercase tracking-wider text-accent">How It’s Different</h3>
+                <p className="text-sm text-muted-foreground">
+                  This replaces “what’s wrong with you” with “how did you survive this wiring?” It treats trauma responses as outdated threat protocols, not character flaws.
+                </p>
+              </div>
+            </div>
+
+            <div className="p-6 bg-background/50 border border-accent/20 rounded-lg">
+              <h3 className="text-lg font-bold mb-3 font-sans text-accent">What Changes</h3>
+              <p className="text-sm">
+                You stop fighting your biology. You learn to name the protocol. You replace punishment with predictability, shame with data, and isolation with borrowed calm. The goal isn’t perfection. It’s alignment.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* START HERE Section */}
+      <section className="py-12 md:py-16 bg-background">
+        <div className="container max-w-4xl">
+          <h2 className="text-3xl font-bold mb-8 font-sans text-accent">Start Here</h2>
+          <p className="mb-8 font-serif">Don’t read this cover-to-cover unless you want to. Read it by state.</p>
+          
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <button 
+              onClick={() => setLocation('/article/the-shakes-are-the-alarm')}
+              className="p-6 bg-card border border-border rounded-lg hover:border-accent/50 transition-all text-left group"
+            >
+              <h3 className="font-bold mb-2 group-hover:text-accent transition-colors">Locked or Shaking?</h3>
+              <p className="text-xs text-muted-foreground mb-4">If you're dissociating or in high-alert. Use the whispers. Do not analyze. Just regulate.</p>
+              <div className="flex items-center text-xs font-bold text-accent uppercase tracking-widest">
+                Go to Regulation <ArrowRight className="ml-2 w-3 h-3" />
+              </div>
+            </button>
+
+            <button 
+              onClick={() => setLocation('/article/shame-is-the-glue')}
+              className="p-6 bg-card border border-border rounded-lg hover:border-accent/50 transition-all text-left group"
+            >
+              <h3 className="font-bold mb-2 group-hover:text-accent transition-colors">Drowning in Shame?</h3>
+              <p className="text-xs text-muted-foreground mb-4">If self-hatred is heavy. Name it. Don’t argue with it. Use the Core Defaults as a reality check.</p>
+              <div className="flex items-center text-xs font-bold text-accent uppercase tracking-widest">
+                Go to Reframing <ArrowRight className="ml-2 w-3 h-3" />
+              </div>
+            </button>
+
+            <button 
+              onClick={() => setLocation('/article/i-got-clean-i-didnt-get-free')}
+              className="p-6 bg-card border border-border rounded-lg hover:border-accent/50 transition-all text-left group"
+            >
+              <h3 className="font-bold mb-2 group-hover:text-accent transition-colors">Sober but Stuck?</h3>
+              <p className="text-xs text-muted-foreground mb-4">If old loops are repeating. You’re not failing. You’re rewiring.</p>
+              <div className="flex items-center text-xs font-bold text-accent uppercase tracking-widest">
+                Go to Rewiring <ArrowRight className="ml-2 w-3 h-3" />
+              </div>
+            </button>
+
+            <button 
+              onClick={() => setLocation('/article/they-called-it-noncompliance')}
+              className="p-6 bg-card border border-border rounded-lg hover:border-accent/50 transition-all text-left group"
+            >
+              <h3 className="font-bold mb-2 group-hover:text-accent transition-colors">Work in the System?</h3>
+              <p className="text-xs text-muted-foreground mb-4">For courts, probation, or treatment. Operational protocols you can use tomorrow.</p>
+              <div className="flex items-center text-xs font-bold text-accent uppercase tracking-widest">
+                Go to Protocols <ArrowRight className="ml-2 w-3 h-3" />
+              </div>
+            </button>
+
+            <button 
+              onClick={() => setLocation('/article/co-regulation-barriers')}
+              className="p-6 bg-card border border-border rounded-lg hover:border-accent/50 transition-all text-left group"
+            >
+              <h3 className="font-bold mb-2 group-hover:text-accent transition-colors">Rural or Isolated?</h3>
+              <p className="text-xs text-muted-foreground mb-4">If you have no steady people nearby. Predictability &gt; proximity.</p>
+              <div className="flex items-center text-xs font-bold text-accent uppercase tracking-widest">
+                Go to Scaffolds <ArrowRight className="ml-2 w-3 h-3" />
+              </div>
+            </button>
+
+            <button 
+              onClick={() => setLocation('/article/15-core-defaults')}
+              className="p-6 bg-accent/5 border border-accent/20 rounded-lg hover:border-accent/50 transition-all text-left group"
+            >
+              <h3 className="font-bold mb-2 text-accent">The 15 Defaults</h3>
+              <p className="text-xs text-muted-foreground mb-4">The rules of the system. A quick-reference for your own wiring.</p>
+              <div className="flex items-center text-xs font-bold text-accent uppercase tracking-widest">
+                View Rules <ArrowRight className="ml-2 w-3 h-3" />
+              </div>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Audience Lanes Section */}
+      <section className="py-12 md:py-16 bg-card border-t border-b border-border">
+        <div className="container max-w-3xl">
+          <h2 className="text-3xl font-bold mb-8 font-sans">Audience Lanes</h2>
           
           <div className="space-y-8 text-foreground font-serif leading-relaxed">
             <div className="p-6 bg-background/50 border-l-4 border-accent rounded-r-lg">
-              <h3 className="text-xl font-bold mb-3 font-sans text-accent">Audience Lanes</h3>
               <p className="mb-4">This book is built to stand alone, but it serves three different readers. Pick your lane.</p>
               <div className="grid gap-6 md:grid-cols-3 text-sm">
                 <div>
                   <p className="font-bold text-accent mb-1 font-sans uppercase tracking-wider">Survivors / Peers</p>
-                  <p className="text-muted-foreground">Read for the map, not the manual. The articles are psychoeducational, not clinical. Use this to name what you’re carrying, not to prove you’re fixed.</p>
+                  <p className="text-muted-foreground">Read for the map, not the manual. Use this to name what you’re carrying, not to prove you’re fixed.</p>
                 </div>
                 <div>
                   <p className="font-bold text-accent mb-1 font-sans uppercase tracking-wider">Legal Support</p>
-                  <p className="text-muted-foreground">Focus on the freeze response and the compliance vs. survival gap. This isn’t about lowering standards. It’s about recognizing when “noncompliance” is a nervous system shutdown.</p>
+                  <p className="text-muted-foreground">Recognize when “noncompliance” is a nervous system shutdown. Operational reframes for court staff.</p>
                 </div>
                 <div>
                   <p className="font-bold text-accent mb-1 font-sans uppercase tracking-wider">Clinicians / Providers</p>
-                  <p className="text-muted-foreground">Use the conceptual framework and the missing-pieces index. It translates physiology into plain language so you can explain mechanisms without overpromising outcomes.</p>
+                  <p className="text-muted-foreground">Translate physiology into plain language so you can explain mechanisms without overpromising outcomes.</p>
                 </div>
               </div>
-            </div>
-
-            <div className="space-y-4">
-              <p>
-                If you have been called lazy, defiant, broken, or weak – this book is for you. You
-                are not what they called you. You are a nervous system that learned to survive.
-              </p>
-              <p>
-                Each article ends with a list of "Missing Pieces"—cross-references to Part III that name what traditional systems overlook. The Technical Appendix (Part II) holds the science, citations, and reframes.
-              </p>
-              <p className="text-lg font-semibold text-accent italic">
-                This is a map of the wiring. Not a substitute for the mechanic.
-              </p>
             </div>
 
             <div className="mt-8 pt-8 border-t border-border grid grid-cols-1 md:grid-cols-2 gap-8 text-sm font-sans">
@@ -109,7 +203,7 @@ export default function Home() {
               <div>
                 <p className="font-bold text-accent mb-2 uppercase tracking-widest">Boundary Note</p>
                 <p className="text-muted">
-                  This book explains mechanisms. It does not diagnose, treat, or replace legal counsel. If you’re in acute crisis, contact a licensed provider or emergency service.
+                  This book explains mechanisms. It does not diagnose, treat, or replace legal counsel. If you’re in acute crisis, contact a licensed provider.
                 </p>
               </div>
             </div>
@@ -195,11 +289,10 @@ export default function Home() {
           <div className="space-y-4 text-foreground font-serif leading-relaxed">
             <p>
               <strong>Daniel Lingar</strong> was born in Davenport, Iowa, and raised in Clarksville, Arkansas. 
-              He spent forty-three years living with undiagnosed CPTSD—a condition that was running his life with mechanical precision, though no system he passed through ever translated the mechanism behind it.
+              He spent forty-three years living with undiagnosed CPTSD—a condition that was running his life with mechanical precision.
             </p>
             <p>
-              He is the co-founder of <strong>Capitol Contracts LLC</strong>, a government contracting company based in Clarksville. 
-              His memoir, <em>From the Storm to the Fire</em>, is the narrative foundation of the <strong>What Really Happened (WRH)</strong> curriculum.
+              He is the co-founder of <strong>Capitol Contracts LLC</strong>. His memoir, <em>From the Storm to the Fire</em>, is the narrative foundation of the <strong>What Really Happened (WRH)</strong> curriculum.
             </p>
             <p className="text-sm text-muted pt-4 border-t border-border mt-6">
               For more information and resources, visit the{" "}
@@ -229,9 +322,7 @@ export default function Home() {
             </p>
             <p className="text-primary-foreground/80">
               <strong>Disclaimer:</strong> This book is not a substitute for professional medical
-              or mental health advice. The author is not a therapist, doctor, or clinician. The
-              content is based on lived experience and psychoeducational principles. If you are in
-              crisis, please reach out to a trusted person or a crisis hotline.
+              or mental health advice. The goal is regulation, not perfection.
             </p>
             <p className="text-xs text-primary-foreground/60 pt-4 border-t border-primary-foreground/10">
               Published by Capitol Contracts LLC, Clarksville, Arkansas. ISBN: [pending]

@@ -209,6 +209,17 @@ export const ARTICLES: Article[] = [
     themes: ["Co-Regulation", "Barriers", "Connection"],
     relatedArticles: [10, 4],
   },
+  {
+    id: 19,
+    slug: "15-core-defaults",
+    title: "The 15 Core Defaults",
+    subtitle: "Rules of the system",
+    part: "resources",
+    contentFile: "15_defaults.md",
+    readingTime: 5,
+    themes: ["Principles", "System Rules", "Regulation"],
+    relatedArticles: [],
+  },
 ];
 
 export const ARTICLE_PARTS = {
