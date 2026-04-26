@@ -9,7 +9,8 @@ export function useMarkdown(filename: string) {
     const loadMarkdown = async () => {
       try {
         setLoading(true);
-        const response = await fetch(`/content/${filename}`);
+        // Use relative path for GitHub Pages sub-directory hosting
+        const response = await fetch(`content/${filename}`);
         if (!response.ok) {
           throw new Error(`Failed to load ${filename}`);
         }
