@@ -203,7 +203,7 @@ export default function Home() {
               <div>
                 <p className="font-bold text-accent mb-2 uppercase tracking-widest">About the Author</p>
                 <p className="text-muted">
-                  Daniel Lingar is the co-founder of Capitol Contracts LLC. His memoir, <em>From the Storm to the Fire</em>, is the narrative foundation of the WRH curriculum.
+                  Daniel Lingar was born in Davenport, Iowa, and raised in Clarksville, Arkansas. He spent forty-three years living with undiagnosed CPTSD — a condition that was running his life with mechanical precision. He is the co-founder of Capitol Contracts LLC. His memoir, <em>From the Storm to the Fire</em>, is the narrative foundation of the What Really Happened (WRH) curriculum.
                 </p>
               </div>
             </div>
@@ -223,7 +223,7 @@ export default function Home() {
                 <h3 className="text-xl font-bold mb-2 font-sans uppercase tracking-widest text-accent">
                   {part.title}
                 </h3>
-                <p className="text-sm text-muted-foreground mb-8 italic">
+                <p className="text-sm text-muted-foreground mb-6 font-serif italic">
                   {part.description}
                 </p>
 
