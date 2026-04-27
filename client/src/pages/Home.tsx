@@ -101,7 +101,7 @@ export default function Home() {
           
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             <button 
-              onClick={() => setLocation('/article/the-shakes-are-the-alarm')}
+              onClick={() => setLocation('/article/the-shakes-are-the-alarm-waking-up')}
               className="p-6 bg-card border border-border rounded-lg hover:border-accent/50 transition-all text-left group"
             >
               <h3 className="font-bold mb-2 group-hover:text-accent transition-colors">Locked or Shaking?</h3>
@@ -217,8 +217,8 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-12 font-sans">The Manuscript</h2>
           
           <div className="space-y-12">
-            {ARTICLE_PARTS.map((part) => (
-              <div key={part.id} className="border-l-2 border-border pl-8 relative">
+            {Object.entries(ARTICLE_PARTS).map(([partId, part]) => (
+              <div key={partId} className="border-l-2 border-border pl-8 relative">
                 <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-accent border-4 border-background"></div>
                 <h3 className="text-xl font-bold mb-2 font-sans uppercase tracking-widest text-accent">
                   {part.title}
@@ -228,23 +228,23 @@ export default function Home() {
                 </p>
 
                 <div className="grid gap-4">
-                  {getArticlesByPart(part.id).map((article) => (
+                  {getArticlesByPart(partId as any).map((article) => (
                     <button
                       key={article.id}
-                      onClick={() => setLocation(`/article/${article.id}`)}
+                      onClick={() => setLocation(`/article/${article.slug}`)}
                       className="flex flex-col md:flex-row md:items-center justify-between p-6 bg-card border border-border rounded-lg hover:border-accent/50 transition-all text-left group"
                     >
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-1">
                           <span className="text-xs font-bold text-accent/60 font-sans">
-                            {article.order.toString().padStart(2, '0')}
+                            {article.id.toString().padStart(2, '0')}
                           </span>
                           <h4 className="font-bold group-hover:text-accent transition-colors">
                             {article.title}
                           </h4>
                         </div>
                         <p className="text-sm text-muted-foreground">
-                          {article.description}
+                          {article.subtitle}
                         </p>
                       </div>
                       <div className="mt-4 md:mt-0 md:ml-8 flex items-center gap-4 text-xs text-muted-foreground font-sans whitespace-nowrap">
