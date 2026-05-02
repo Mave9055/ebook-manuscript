@@ -1,52 +1,73 @@
 # The Rescue Boat & Other Counter-Narratives
 
-**The Rescue Boat & Other Counter-Narratives** is a trauma education and counter-narrative manuscript site. It serves as a survival doctrine and translation tool for those navigating the complexities of trauma, addiction, and the nervous system.
+A trauma education and counter-narrative manuscript site exploring addiction, the nervous system, and survival protocols.
 
-## 🌐 Live Site
-The manuscript is live and accessible at:
-**[https://mave9055.github.io/ebook-manuscript/](https://mave9055.github.io/ebook-manuscript/)**
+## Overview
 
-## 📖 Project Overview
-This site hosts a collection of 19 peer-written articles, protocols, and resources designed to replace shame-based narratives with biological understanding. It is organized into four main sections:
+**The Rescue Boat** is a digital manuscript and educational platform designed to provide a "survival doctrine" for those navigating trauma, addiction, and the nervous system. Unlike traditional approaches that focus on compliance, this project offers translation — reframing trauma responses as biological survival protocols rather than character flaws.
 
-- **Part I: The Counter-Narratives** – Twelve articles challenging traditional narratives about addiction and survival.
-- **Part II: Technical Appendix** – Citations, neurobiology, and the research foundation.
-- **Part III: The Seven Missing Pieces** – Tools and reframes overlooked by traditional systems.
-- **Additional Resources** – Practical protocols (e.g., Freeze Response Protocol for Courtrooms), laws of survival, and practical tools.
+The site is built as a high-performance, single-page application (SPA) optimized for reading and accessibility, serving as the canonical source for the manuscript content.
 
-## 🏗️ Content Structure
-- `client/public/content/`: Contains the canonical Markdown files for all articles.
-- `client/src/lib/articles.ts`: The source of truth for article metadata, slugs, and organization.
-- `client/src/pages/`: React components for the Home and Article views.
+## Live Site
 
-## 🛠️ Build & Deployment
-This project is built with **React**, **Vite**, and **Tailwind CSS**. It is designed to be hosted on **GitHub Pages**.
+The manuscript is live and can be accessed at:
+[https://mave9055.github.io/ebook-manuscript/](https://mave9055.github.io/ebook-manuscript/)
 
-### Local Development
-1. Install dependencies:
-   ```bash
-   pnpm install
-   ```
-2. Start the development server:
-   ```bash
-   pnpm run dev
-   ```
+## Content Structure
 
-### Build for Production
-To generate the static files for deployment:
-```bash
-pnpm run build
-```
-The build process automatically:
-1. Compiles the React application into `dist/public`.
-2. Bundles the server-side logic (if applicable).
-3. Copies `index.html` to `404.html` to support client-side routing on GitHub Pages.
+The manuscript is organized into four key sections:
+
+| Section | Title | Description |
+| :--- | :--- | :--- |
+| **Part I** | The Counter-Narratives | Twelve core articles challenging traditional narratives of shame and blame. |
+| **Part II** | Technical Appendix | Deep science, neurobiology, and research citations supporting the manuscript. |
+| **Part III** | Missing Pieces | Tools and reframes often overlooked by traditional recovery systems. |
+| **Part IV** | Resources | Practical protocols, the "26 Laws of Survival," and harm reduction notes. |
+
+## Development & Deployment
+
+### Tech Stack
+
+- **Framework:** React 19 with Vite
+- **Styling:** Tailwind CSS
+- **Routing:** Wouter (configured for GitHub Pages sub-paths)
+- **Content:** Markdown-based article system
+
+### Build Instructions
+
+To run the project locally or build for production, ensure you have `pnpm` installed:
+
+1.  **Install Dependencies:**
+    ```bash
+    pnpm install
+    ```
+
+2.  **Local Development:**
+    ```bash
+    pnpm run dev
+    ```
+
+3.  **Build for Production:**
+    ```bash
+    pnpm run build
+    ```
+    *Note: The build process automatically generates the `404.html` required for GitHub Pages routing.*
+
+4.  **Type Check:**
+    ```bash
+    pnpm run check
+    ```
 
 ### Deployment
-The site is automatically deployed to GitHub Pages from the `main` branch (or via a GitHub Action if configured).
 
-## ⚠️ Disclaimer
-This is a trauma education resource. It is intended for educational purposes and peer support. It is not a substitute for professional therapy or medical advice.
+The site is deployed to GitHub Pages. The build output in `dist/public` is designed to be served from the `/ebook-manuscript/` base path. Routing for direct article links is handled via a custom `404.html` redirection script.
+
+## Purpose & Audience
+
+This is a **trauma education** site. It is intended for:
+- **Survivors & Peers:** To provide a map for naming and understanding their own wiring.
+- **Legal Support Staff:** To offer operational reframes for "noncompliance" in court and probation settings.
+- **Clinicians & Providers:** To help translate complex physiology into plain, actionable language.
 
 ---
-*© Capitol Contracts LLC*
+*This repository serves as the single source of truth for The Rescue Boat manuscript.*
